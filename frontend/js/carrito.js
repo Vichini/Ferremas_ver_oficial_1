@@ -51,7 +51,7 @@ async function finalizarPedido() {
     if (res.ok && data.url && data.token) {
       localStorage.removeItem('carrito');
 
-      // Crear formulario y redirigir automáticamente a Webpay
+    
       const form = document.createElement('form');
       form.method = 'POST';
       form.action = data.url;
