@@ -1,0 +1,200 @@
+/* RESET Y BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(to bottom, #fdfbfb, #ebedee);
+  color: #333;
+  min-height: 100vh;
+}
+
+/* ============================= */
+/* ======== LOGIN VIEW ========= */
+/* ============================= */
+
+body.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 35px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  animation: fadeIn 0.7s ease;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #2a2a2a;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  transition: 0.3s;
+  font-size: 15px;
+  background-color: #f9f9f9;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #fff;
+}
+
+button {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(to right, #007bff, #00bfff);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(to right, #0056b3, #008ecc);
+}
+
+#ya-logueado {
+  margin-top: 20px;
+  font-size: 16px;
+  background: #eef3f7;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+#ya-logueado a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+#ya-logueado a:hover {
+  color: #0056b3;
+}
+
+/* ============================= */
+/* ========= HOME PAGE ========= */
+/* ============================= */
+
+header {
+  background-color: #0d6efd;
+  padding: 20px;
+  color: white;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom right, #e9f1ff, #ffffff);
+}
+
+.hero h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555;
+}
+
+.destacados {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.destacados h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.productos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.producto-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #f1f3f5;
+  margin-top: 60px;
+}
+
+/* ============================= */
+/* ========== ANIM ============= */
+/* ============================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
