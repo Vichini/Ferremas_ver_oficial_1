@@ -29,19 +29,29 @@
 ## 🛠️ Instalación y ejecución local
 
 ### 🔁 Clona el repositorio
-
-```bash
 git clone https://github.com/tuusuario/ferremas.git
 cd ferremas
+
+
 ⚙️ Backend
+
 bash
+
 Copiar
+
 Editar
+
 cd backend
+
 python -m venv venv
+
 venv\Scripts\activate  # en Windows
+
 pip install -r requirements.txt
+
 python app.py
+
+
 🌐 Frontend
 En otra terminal:
 
