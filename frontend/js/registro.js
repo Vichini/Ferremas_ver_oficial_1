@@ -5,7 +5,6 @@ document.getElementById('registroForm').addEventListener('submit', async functio
   const correo = document.getElementById('correo').value;
   const password = document.getElementById('password').value;
 
-  // 1. Enviar registro
   const res = await fetch('http://localhost:5000/api/auth/registro', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -15,7 +14,6 @@ document.getElementById('registroForm').addEventListener('submit', async functio
   const data = await res.json();
 
   if (res.ok) {
-    // 2. Si registro exitoso, iniciar sesión automáticamente
     const loginRes = await fetch('http://localhost:5000/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

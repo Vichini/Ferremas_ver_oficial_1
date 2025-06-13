@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const container = document.getElementById('productos-container');
   const token = localStorage.getItem('token');
 
-  // Si hay token, obtenemos el nombre del usuario y mostramos saludo + carrito
+  
   if (token) {
     try {
       const res = await fetch('http://localhost:5000/api/auth/me', {
@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  // Mostrar productos destacados
   try {
     const res = await fetch('http://localhost:5000/api/productos/');
     const productos = await res.json();
