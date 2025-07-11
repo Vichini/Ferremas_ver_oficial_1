@@ -2,22 +2,52 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro - Ferremas</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="login">
-  <div class="login-container">
-    <h2>Crear Cuenta</h2>
-    <form id="registroForm">
-      <input type="text" id="nombre" placeholder="Nombre completo" required><br>
-      <input type="email" id="correo" placeholder="Correo electrónico" required><br>
-      <input type="password" id="password" placeholder="Contraseña" required><br>
-      <button type="submit">Registrarse</button>
-    </form>
-    <div style="margin-top: 15px;">
-      <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+<body class="auth-page">
+  <main class="auth-container">
+    <div class="login-container">
+      <header class="auth-header">
+        <h1>🔧 Ferremas</h1>
+        <h2>Crear Cuenta</h2>
+        <p>Únete a nuestra comunidad</p>
+      </header>
+
+      <form id="registroForm" novalidate>
+        <div class="input-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required aria-describedby="nombre-error">
+          <div id="nombre-error" class="error-message" aria-live="polite"></div>
+        </div>
+
+        <div class="input-group">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required aria-describedby="correo-error">
+          <div id="correo-error" class="error-message" aria-live="polite"></div>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="Mínimo 6 caracteres" required minlength="6" aria-describedby="password-error">
+          <div id="password-error" class="error-message" aria-live="polite"></div>
+        </div>
+
+        <button type="submit" class="btn-primary">
+          <span class="btn-text">Registrarse</span>
+          <div class="btn-spinner" style="display: none;">
+            <div class="spinner-small"></div>
+          </div>
+        </button>
+      </form>
+
+      <div class="auth-links">
+        <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+        <a href="home.html" class="back-link">← Volver al inicio</a>
+      </div>
     </div>
-  </div>
+  </main>
 
   <script src="js/registro.js"></script>
 </body>
